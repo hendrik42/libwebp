@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 
-WEBP_CFLAGS := -Wall -DANDROID -DHAVE_MALLOC_H -DHAVE_PTHREAD -DWEBP_USE_THREAD
+WEBP_CFLAGS := -Wall -DANDROID -DHAVE_PTHREAD -DWEBP_USE_THREAD
 WEBP_CFLAGS += -fvisibility=hidden
 
 ifeq ($(APP_OPTIM),release)
@@ -273,7 +273,7 @@ endif
 
 WEBP_SRC_PATH := $(LOCAL_PATH)
 include $(WEBP_SRC_PATH)/imageio/Android.mk
-include $(WEBP_SRC_PATH)/examples/Android.mk
+# lighthouse include $(WEBP_SRC_PATH)/examples/Android.mk
 
 ifeq ($(USE_CPUFEATURES),yes)
   $(call import-module,android/cpufeatures)
